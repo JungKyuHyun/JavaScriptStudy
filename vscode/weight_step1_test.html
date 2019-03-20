@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //var userHeight = 180; //신장
+        //var userWeight = 74; //체중
+
+        var name = prompt("당신의 이름은?", ""); //이름 입력
+        var height = prompt("당신의 신장은?", "0"); //신장 입력
+        var weight = prompt("당신의 몸무게는?", "0");
+        
+        //평균 체중 = (신장 -100) + 0.9 
+        var normal_w = (height - 100) * 0.9;
+        //document.write(normal_w);
+        var result = weight >= normal_w -5 && weight<=normal_w+5; //오차범위 +-5
+        result = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+        document.write(name + "님은 " + result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
