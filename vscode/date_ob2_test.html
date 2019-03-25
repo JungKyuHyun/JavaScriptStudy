@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var today = new Date();
+        var nowYear = today.getFullYear();
+
+        var theDate = new Date(nowYear, 12, 31);
+        var diffDate = theDate.getTime() - today.getTime();
+        /*
+        1초 = 1000(msc)
+        1분(60초) = 1000*60
+        1시간(60분) = 1000*60*60
+        1일(60분*24) = 1000*60*60*24
+        */
+        var result = Math.ceil(diffDate/(60*1000*60*24));
+        document.write("연말 D-day: "+result +"일 남았습니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
