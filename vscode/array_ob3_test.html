@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var greenArr = ["교대","방배","강남"];
+        var yelloArr = ["미금", "정자", "수서"];
+
+        greenArr.splice(2,1,"서초","역삼"); //2번 인덱스로부터 1개의 데이터를 삭제. 그런 다음 "서초", "역삼"을 삽입
+        console.log(greenArr); // 교대,방배,서초,역삼
+
+        var data1 = yelloArr.pop(); // yelloArr 배열 마지막 인덱스의 데이터를 data1에 저장합니다. //수서
+        var data2 = yelloArr.shift(); // yelloArr 배열 가장 앞쪽 인덱스의 데이터를 data2에 저장합니다. //미금   // yelloArr = [정자]
+
+        yelloArr.push(data2); // data2에 저장된 데이터를 yelloArr 배열의 마지막 인덱스에 밀어 넣습니다. 
+        console.log(yelloArr); //[정자, 미금]
+
+        yelloArr.unshift(data1); // data1에 저장된 데이터를 yelloArr 배열의 가장 앞쪽 인덱스에 밀어 넣습니다.
+        console.log(yelloArr); //[수서, 정자, 미금]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
